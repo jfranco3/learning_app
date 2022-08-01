@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
 const MyConditionalComponent = (props) => {
-  if (props.isVerified) {
-    return <IsVerifiedComponent userId={props.id} />
-  } else {
-    return <NotVerifiedComponent userId={props.id} />
-  }
+//   if (props.isVerified) {
+//     return <IsVerifiedComponent userId={props.id} />
+//   } else {
+//     return <NotVerifiedComponent userId={props.id} />
+//   }
+return props.isVerified ? <IsVerifiedComponent userId={props.id} /> : <NotVerifiedComponent/>
 }
 
 const IsVerifiedComponent = (props) => {  

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ChildComponent from './../components/Footer/index';
+import MyConditionalComponent from '../components/MyConditionalComponent/index';
 // // import MyFirstComponent from '../MyFirstComponent';
 
 class Layout extends Component {
@@ -8,7 +9,8 @@ class Layout extends Component {
     this.state = {
       food: 'it is a frog',
       describe: 'chicken',
-      arrayOfTodos: []
+      arrayOfTodos: [],
+      isVerified: false,
     };    
   }
 
@@ -22,6 +24,7 @@ class Layout extends Component {
     render() {
       return (
         <div>
+          <MyConditionalComponent isVerified={this.state.isVerified}/>
           <ol>{this.state.arrayOfTodos.map((todo, index) => {
           return (
             <li key={index}>
