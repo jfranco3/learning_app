@@ -7,14 +7,28 @@ class Layout extends Component {
     super(props);
     this.state = {
       food: 'it is a frog',
-      describe: 'chicken'
+      describe: 'chicken',
+      arrayOfTodos: []
     };    
   }
 
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+     .then(response => {
+      return response.json()
+     }).then(arrayOfTodos => this.setState({ arrayOfTodos }))
+ }
 
     render() {
       return (
         <div>
+          <ol>{this.state.arrayOfTodos.map((todo, index) => {
+          return (
+            <li key={index}>
+							{todo.title}
+						</li>
+          )
+        })}</ol>
           <ChildComponent frog={this.state.food} chicken={this.state.describe}/>
         </div>
       );
