@@ -1,5 +1,8 @@
+import React from 'react'
+
 
   const ChildComponent = (props) => {
+    // const [count, setCount] = useState(0);
     const frog = props.frog
     const chicken = props.chicken
     return (
