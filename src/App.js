@@ -9,11 +9,6 @@ import {
 } from "./components/FunctionalHook/indexUseEffect";
 import { Button } from "@mui/material";
 
-
-
-
-
-
 function App() {
   const message = true;
   return (
