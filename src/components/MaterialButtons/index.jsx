@@ -1,15 +1,33 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { styled} from '@mui/system'
+
+
+const MyComponent = styled('div')({
+  color: 'darkslategray',
+  backgroundColor: 'aliceblue',
+  padding: 8,
+  borderRadius: 4,
+});
+
+export default function BasicUsage() {
+  return <MyComponent>Styled div</MyComponent>;
+}
+
 
 export default function ButtonSizes() {
   return (
     <Box sx={{ '& button': { m: 1 } }}>
-      <div>
+     
+        <MyComponent>
         <Button size="small">Small</Button>
+        </MyComponent>
+        
         <Button size="medium">Medium</Button>
         <Button size="large">Large</Button>
-      </div>
+       
+      
       <div>
         <Button variant="outlined" size="small">
           Small
@@ -22,7 +40,7 @@ export default function ButtonSizes() {
         </Button>
       </div>
       <div>
-        <Button variant="contained" size="small">
+        <Button variant="text" size="small">
           Small
         </Button>
         <Button variant="contained" size="medium">
@@ -33,5 +51,5 @@ export default function ButtonSizes() {
         </Button>
       </div>
     </Box>
-  );
+  )
 }

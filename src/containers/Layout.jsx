@@ -11,7 +11,7 @@ class Layout extends Component {
       food: "it is a frog",
       describe: "chicken",
       arrayOfTodos: [],
-      isVerified: true,
+      isVerified: false,
     };
   }
 
